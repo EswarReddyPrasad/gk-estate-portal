@@ -62,7 +62,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <Button className="flex items-center gap-2 bg-primary hover:bg-primary/90">
+            <Button className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary">
               <span>Enquire Now</span>
               <ArrowRight size={16} />
             </Button>
@@ -97,7 +97,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <Button className="mt-8 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90">
+          <Button className="mt-8 flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-primary">
             <span>Enquire Now</span>
             <ArrowRight size={16} />
           </Button>

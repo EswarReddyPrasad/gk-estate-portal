@@ -28,11 +28,11 @@ const Hero = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center" 
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2000&auto=format&fit=crop')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop')",
             backgroundPosition: "center 30%"
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40" />
+        <div className="absolute inset-0 nature-overlay" />
       </div>
 
       {/* Content */}
@@ -42,13 +42,13 @@ const Hero = () => {
             Exceptional Real Estate Development
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
-            Creating Spaces That Inspire <span className="text-secondary">Extraordinary</span> Lives
+            Creating Spaces That Inspire <span className="gold-accent">Extraordinary</span> Lives
           </h1>
-          <p className="text-white/80 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
+          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
             A partnership of excellence from the top leadership of Concorde-Bangalore and TKN Developers, crafting premium living spaces.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-secondary hover:bg-secondary/90 text-primary px-6 py-6 rounded-md text-base font-medium">
+            <Button className="bg-secondary hover:bg-secondary/90 text-primary font-semibold px-6 py-6 rounded-md text-base shadow-lg">
               Explore Projects
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white/10 px-6 py-6 rounded-md text-base font-medium flex items-center gap-2">

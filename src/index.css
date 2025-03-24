@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 18%;
 
-    --primary: 215 30% 26%;
+    --primary: 142 40% 20%;
     --primary-foreground: 210 20% 98%;
 
-    --secondary: 39 70% 50%;
+    --secondary: 38 95% 45%;
     --secondary-foreground: 215 25% 18%;
 
     --muted: 210 20% 94%;
     --muted-foreground: 215 20% 45%;
 
-    --accent: 39 70% 50%;
+    --accent: 142 30% 70%;
     --accent-foreground: 215 25% 18%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 215 30% 26%;
+    --ring: 142 40% 20%;
 
     --radius: 0.5rem;
   }
@@ -75,6 +75,18 @@
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%);
     mask-image: linear-gradient(to top, transparent 0%, black 20%);
   }
+  
+  .premium-gradient {
+    @apply bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70;
+  }
+  
+  .nature-overlay {
+    @apply bg-gradient-to-r from-primary/90 to-primary/40;
+  }
+  
+  .gold-accent {
+    @apply text-secondary;
+  }
 }
 
 /* Smooth scrolling */
@@ -101,3 +113,4 @@ html {
 .lazy-image.loaded {
   @apply blur-0;
 }
+
