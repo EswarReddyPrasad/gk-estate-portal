@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const projectDetails = {
   id: 1,
-  title: "Nature Valley",
-  location: "Near Bangalore",
-  description: "A luxurious residential development offering plots with villa-building assistance, surrounded by lush greenery and tranquil environment.",
+  title: "G.K. Nature Valley",
+  location: "Bode Vari Palli (Village), Near Madanapalli",
+  description: "A luxurious farm plots development with DTCP approval, offering customizable villa-building assistance, surrounded by lush greenery and near Subhareddy lake.",
   mainImage: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1200&auto=format&fit=crop",
   features: [
     {
@@ -43,9 +43,9 @@ const FeaturedProjects = () => {
           <span className="inline-block py-1 px-3 bg-secondary/20 text-secondary rounded-full text-sm font-medium mb-4">
             Featured Development
           </span>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-4">Nature Valley</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4">G.K. Nature Valley</h2>
           <p className="text-muted-foreground">
-            Experience the perfect blend of nature and modern living in our premium residential development near Bangalore.
+            Experience the perfect blend of nature and modern living in our premium farm plots development near Madanapalli, beside Adithya Engineering College.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const FeaturedProjects = () => {
         <div className="mt-12 text-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
             <Link to="/projects">
-              Learn More About Nature Valley <ArrowRight size={16} className="ml-2" />
+              Learn More About G.K. Nature Valley <ArrowRight size={16} className="ml-2" />
             </Link>
           </Button>
         </div>
