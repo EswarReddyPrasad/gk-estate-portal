@@ -1,12 +1,9 @@
-
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-
   useEffect(() => {
     // Parallax effect on scroll
     const handleScroll = () => {
@@ -24,33 +21,19 @@ const Hero = () => {
         console.error("Video playback failed:", error);
       });
     }
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  return (
-    <div className="relative h-screen flex items-center overflow-hidden">
+  return <div className="relative h-screen flex items-center overflow-hidden">
       {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0" ref={heroRef}>
-        <video 
-          ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          poster="https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop"
-        >
+        <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline poster="https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop">
           <source src="/lovable-uploads/nature-valley-video.mp4" type="video/mp4" />
           {/* Fallback background image if video fails to load */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center" 
-            style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop')",
-              backgroundPosition: "center 30%"
-            }}
-          />
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop')",
+          backgroundPosition: "center 30%"
+        }} />
         </video>
         <div className="absolute inset-0 nature-overlay" />
       </div>
@@ -71,7 +54,7 @@ const Hero = () => {
             <Button className="bg-secondary hover:bg-secondary/90 text-primary font-semibold px-6 py-6 rounded-md text-base shadow-lg">
               Explore Nature Valley
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 px-6 py-6 rounded-md text-base font-medium flex items-center gap-2">
+            <Button variant="outline" className="border-white text-white px-6 py-6 rounded-md text-base font-medium flex items-center gap-2 bg-gray-950 hover:bg-gray-800">
               Contact Us <ArrowRight size={16} />
             </Button>
           </div>
@@ -80,8 +63,6 @@ const Hero = () => {
 
       {/* Decorative element */}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent z-10" />
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
