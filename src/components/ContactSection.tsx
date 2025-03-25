@@ -1,37 +1,42 @@
-
 import { useState } from "react";
 import { ArrowRight, Mail, Phone, MapPin, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const ContactSection = () => {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
+    message: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormState((prev) => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormState(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formState);
     // In a real implementation, we would send this data to a server
     setIsSubmitted(true);
-    setFormState({ name: "", email: "", phone: "", message: "" });
-    
+    setFormState({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+
     // Reset the submitted state after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
     }, 3000);
   };
-
-  return (
-    <section className="section-padding">
+  return <section className="section-padding">
       <div className="container-custom mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="animate-fade-in-left">
@@ -50,9 +55,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Phone</h3>
-                  <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91 9876 543 210
-                  </a>
+                  <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">+91 9959798991</a>
                 </div>
               </div>
               
@@ -62,9 +65,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Email</h3>
-                  <a href="mailto:info@gkestates.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    info@gkestates.com
-                  </a>
+                  <a href="mailto:info@gkestates.com" className="text-muted-foreground hover:text-primary transition-colors">tkndevelopersgk@gmail.com</a>
                 </div>
               </div>
               
@@ -86,8 +87,7 @@ const ContactSection = () => {
           
           <div className="animate-fade-in-right">
             <div className="bg-white rounded-lg shadow-lg p-8">
-              {isSubmitted ? (
-                <div className="text-center py-8">
+              {isSubmitted ? <div className="text-center py-8">
                   <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Check className="text-green-600" size={28} />
                   </div>
@@ -95,9 +95,7 @@ const ContactSection = () => {
                   <p className="text-muted-foreground">
                     Thank you for reaching out. Our team will get back to you shortly.
                   </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
+                </div> : <form onSubmit={handleSubmit}>
                   <h3 className="text-xl font-semibold mb-6">Send us a message</h3>
                   
                   <div className="space-y-4">
@@ -105,77 +103,39 @@ const ContactSection = () => {
                       <label htmlFor="name" className="block text-sm font-medium mb-1">
                         Full Name
                       </label>
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={formState.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                        placeholder="Enter your name"
-                      />
+                      <input id="name" name="name" type="text" required value={formState.name} onChange={handleChange} className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Enter your name" />
                     </div>
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-1">
                         Email Address
                       </label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={formState.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                        placeholder="Enter your email"
-                      />
+                      <input id="email" name="email" type="email" required value={formState.email} onChange={handleChange} className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Enter your email" />
                     </div>
                     
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium mb-1">
                         Phone Number
                       </label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formState.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                        placeholder="Enter your phone number"
-                      />
+                      <input id="phone" name="phone" type="tel" value={formState.phone} onChange={handleChange} className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Enter your phone number" />
                     </div>
                     
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium mb-1">
                         Message
                       </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={4}
-                        required
-                        value={formState.message}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"
-                        placeholder="How can we help you?"
-                      />
+                      <textarea id="message" name="message" rows={4} required value={formState.message} onChange={handleChange} className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none" placeholder="How can we help you?" />
                     </div>
                     
                     <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
                       Send Message <ArrowRight size={16} className="ml-2" />
                     </Button>
                   </div>
-                </form>
-              )}
+                </form>}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
