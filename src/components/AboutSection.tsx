@@ -55,6 +55,49 @@ const AboutSection = () => {
             <div className="absolute -top-4 -left-4 w-1/3 h-1/3 bg-primary/10 rounded-lg -z-10" />
           </div>
         </div>
+
+        {/* Leadership Introduction - Gopal Reddy */}
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <div className="rounded-lg overflow-hidden shadow-xl relative z-10">
+              <img 
+                src="public/lovable-uploads/a0badea7-a31d-4e9d-a4d4-eb0cdb5a45dc.png" 
+                alt="Gopal Reddy" 
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-2/3 h-2/3 bg-secondary/10 rounded-lg -z-10" />
+          </div>
+          
+          <div>
+            <span className="inline-block py-1 px-3 bg-secondary/20 text-secondary rounded-full text-sm font-medium mb-4">
+              Leadership
+            </span>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">Gopal Reddy</h3>
+            <h4 className="text-lg font-medium text-secondary mb-4">Managing Director, Concorde Group</h4>
+            <p className="text-muted-foreground mb-4">
+              Gopal Reddy, Managing Director of Concorde Group started the company in 1998. He shares a vision of not just changing perceptions of consumers, but also the very fact on how the real estate industry functions in Bangalore. He is primarily responsible for chalking out development and directional strategies of the group.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-secondary mt-0.5 shrink-0" size={18} />
+                <span>Founded Concorde Group in 1998</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-secondary mt-0.5 shrink-0" size={18} />
+                <span>Industry pioneer</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-secondary mt-0.5 shrink-0" size={18} />
+                <span>Strategic leadership</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-secondary mt-0.5 shrink-0" size={18} />
+                <span>Transformational vision</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

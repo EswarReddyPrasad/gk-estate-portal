@@ -12,7 +12,7 @@ const projectDetails = {
   status: "Ongoing",
   price: "Contact for Pricing",
   description: "Nature Valley is a luxurious residential development designed to offer a peaceful and serene lifestyle, surrounded by lush greenery and a tranquil environment. Located near Madanapalli, beside Adithya Engineering College, Nature Valley provides plots of land for sale, where future homeowners can create their dream homes in a naturally beautiful setting with Subhareddy lake nearby.",
-  mainImage: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1200&auto=format&fit=crop",
+  mainImage: "public/lovable-uploads/84434996-f393-47d3-b9b7-084207d98026.png",
   galleryImages: [
     "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=600&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=600&auto=format&fit=crop",
@@ -41,7 +41,12 @@ const projectDetails = {
       title: "Eco-Friendly Focus",
       description: "The development promotes sustainable living with a strong focus on preserving the natural beauty of the area. Buyers can explore eco-friendly construction options for their villas."
     }
-  ]
+  ],
+  clubhouse: {
+    title: "Exclusive Clubhouse",
+    description: "Our state-of-the-art clubhouse stands as a centerpiece of the Nature Valley project, offering residents a premium space for recreation, fitness, and social gatherings surrounded by the natural beauty of the development.",
+    image: "public/lovable-uploads/84434996-f393-47d3-b9b7-084207d98026.png"
+  }
 };
 
 const Projects = () => {
@@ -104,6 +109,54 @@ const Projects = () => {
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Contact Us for Details <ArrowRight size={16} className="ml-2" />
               </Button>
+            </div>
+          </div>
+
+          {/* Clubhouse Showcase */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold mb-6">Exclusive Clubhouse</h3>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <img 
+                    src={projectDetails.clubhouse.image} 
+                    alt="Nature Valley Clubhouse"
+                    className="w-full rounded-lg shadow-md hover:shadow-xl transition-all"
+                  />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold mb-4">{projectDetails.clubhouse.title}</h4>
+                  <p className="text-muted-foreground mb-6">
+                    {projectDetails.clubhouse.description}
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <div className="h-6 w-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-secondary text-sm">✓</span>
+                      </div>
+                      <span>Modern architecture with premium finishes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="h-6 w-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-secondary text-sm">✓</span>
+                      </div>
+                      <span>Multi-purpose halls for community gatherings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="h-6 w-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-secondary text-sm">✓</span>
+                      </div>
+                      <span>Fitness center and recreational areas</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="h-6 w-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-secondary text-sm">✓</span>
+                      </div>
+                      <span>Panoramic views of the surrounding nature</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
