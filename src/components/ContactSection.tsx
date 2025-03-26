@@ -76,9 +76,9 @@ const ContactSection = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-1">Office</h3>
                   <address className="not-italic text-muted-foreground">
-                    Corporate Office, 1st Floor, <br />
-                    Park Plaza Building, <br />
-                    Bengaluru, Karnataka 560001
+                    Kadiri Rd, Society Colony,<br />
+                    Reddys Colony Extention, Madanapalle, <br />
+                     Andhra Pradesh 517325
                   </address>
                 </div>
               </div>
