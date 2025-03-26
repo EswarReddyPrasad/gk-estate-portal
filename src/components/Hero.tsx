@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -64,11 +65,15 @@ const Hero = () => {
             Exclusive residential plots near Bangalore with villa-building assistance, nestled in lush greenery for a serene lifestyle.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-secondary hover:bg-secondary/90 text-primary font-semibold px-6 py-6 rounded-md text-base shadow-lg">
-              Explore Nature Valley
+            <Button asChild className="bg-secondary hover:bg-secondary/90 text-primary font-semibold px-6 py-6 rounded-md text-base shadow-lg">
+              <Link to="/projects">
+                Explore Nature Valley
+              </Link>
             </Button>
-            <Button variant="outline" className="border-white text-white px-6 py-6 rounded-md text-base font-medium flex items-center gap-2 bg-gray-950 hover:bg-gray-800">
-              Contact Us <ArrowRight size={16} />
+            <Button asChild variant="outline" className="border-white text-white px-6 py-6 rounded-md text-base font-medium flex items-center gap-2 bg-gray-950 hover:bg-gray-800">
+              <Link to="/contact">
+                Contact Us <ArrowRight size={16} />
+              </Link>
             </Button>
           </div>
         </div>

@@ -1,9 +1,13 @@
+
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
 const AboutSection = () => {
   const features = ["25+ years of combined excellence", "Award-winning design philosophy", "Commitment to sustainable development", "Uncompromising quality standards"];
-  return <section className="section-padding">
+  
+  return (
+    <section className="section-padding">
       <div className="container-custom mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 animate-fade-in-left">
@@ -19,10 +23,12 @@ const AboutSection = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {features.map((feature, index) => <div key={index} className="flex items-start gap-2">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-2">
                   <CheckCircle className="text-secondary mt-0.5 shrink-0" size={18} />
                   <span>{feature}</span>
-                </div>)}
+                </div>
+              ))}
             </div>
 
             <Button asChild className="bg-primary hover:bg-primary/90">
@@ -40,10 +46,9 @@ const AboutSection = () => {
             <div className="absolute -top-4 -left-4 w-1/3 h-1/3 bg-primary/10 rounded-lg -z-10" />
           </div>
         </div>
-
-        {/* Leadership Introduction - Gopal Reddy */}
-        
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;

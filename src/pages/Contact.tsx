@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const officeLocations = [
@@ -92,8 +93,10 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Get Directions <ArrowRight size={16} className="ml-2" />
+                <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                  <Link to={`https://maps.google.com/?q=${encodeURIComponent(office.address)}`} target="_blank" rel="noopener noreferrer">
+                    Get Directions <ArrowRight size={16} className="ml-2" />
+                  </Link>
                 </Button>
               </div>
             ))}

@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -16,8 +18,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
   const navLinks = [{
     title: "Home",
     path: "/"
@@ -31,6 +35,7 @@ const Navbar = () => {
     title: "Contact",
     path: "/contact"
   }];
+
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"}`}>
       <div className="container-custom mx-auto">
         <nav className="flex items-center justify-between py-4">
@@ -50,9 +55,11 @@ const Navbar = () => {
                   </Link>
                 </li>)}
             </ul>
-            <Button className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary">
-              <span>Enquire Now</span>
-              <ArrowRight size={16} />
+            <Button asChild className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary">
+              <Link to="/contact">
+                <span>Enquire Now</span>
+                <ArrowRight size={16} />
+              </Link>
             </Button>
           </div>
 
@@ -71,12 +78,15 @@ const Navbar = () => {
                 </Link>
               </li>)}
           </ul>
-          <Button className="mt-8 flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-primary">
-            <span>Enquire Now</span>
-            <ArrowRight size={16} />
+          <Button asChild className="mt-8 flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-primary">
+            <Link to="/contact" onClick={closeMenu}>
+              <span>Enquire Now</span>
+              <ArrowRight size={16} />
+            </Link>
           </Button>
         </div>
       </div>
     </header>;
 };
+
 export default Navbar;
