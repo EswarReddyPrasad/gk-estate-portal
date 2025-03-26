@@ -1,5 +1,4 @@
 
-import { useState, useRef, useEffect } from "react";
 import { ArrowRight, MapPin, Leaf, TreePine, PencilRuler, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,7 @@ const projectDetails = {
   title: "G.K. Nature Valley",
   location: "Bode Vari Palli (Village), Near Madanapalli",
   description: "A luxurious farm plots development with DTCP approval, offering customizable villa-building assistance, surrounded by lush greenery and near Subhareddy lake.",
-  mainImage: "public/lovable-uploads/84434996-f393-47d3-b9b7-084207d98026.png",
+  mainImage: "/lovable-uploads/84434996-f393-47d3-b9b7-084207d98026.png",
   features: [
     {
       icon: TreePine,
