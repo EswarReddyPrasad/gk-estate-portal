@@ -11,12 +11,14 @@ const Contact = () => {
       city: "Bangalore",
       address: "40/1, Vittal Mallya Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001",
       phone: "+91 9876 543 210",
+      email: "bangalore@gkestates.com",
       timing: "Mon-Sat: 9:30 AM - 6:30 PM",
     },
     {
       city: "Madanapalle",
       address: "Kadiri Rd, Society Colony, Reddys Colony Extention, Madanapalle, Andhra Pradesh 517325",
       phone: "+91 9959798991",
+      email: "madanapalle@gkestates.com",
       timing: "Mon-Sat: 9:30 AM - 6:30 PM",
     },
   ];
