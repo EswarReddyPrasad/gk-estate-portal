@@ -8,16 +8,16 @@ import Testimonials from "@/components/Testimonials";
 const About = () => {
   const leaders = [
     {
-      name: "Ajay Patel",
+      name: "Gopal Reddy",
       role: "CEO & Co-Founder",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=400&auto=format&fit=crop",
       bio: "Former leadership at Concorde Group with over 15 years of experience in luxury real estate development.",
     },
     {
-      name: "Kiran Reddy",
+      name: "Krishnappa Naidu ( TKN )",
       role: "Managing Director & Co-Founder",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format&fit=crop",
-      bio: "Previously led TKN Developers as CEO, specializing in integrated townships and commercial developments.",
+      bio: "Previously led TKN Developers as CEO, known for building first integrated layouts and gated communities with special amenities in Madanapalle.",
     },
   ];
 
@@ -82,10 +82,10 @@ const About = () => {
                   Built on a foundation of shared values and complementary expertise, our partnership brings together decades of experience in creating exceptional living spaces across Southern India.
                 </p>
                 <p>
-                  The leadership from Concorde Group brings extensive experience in luxury residential developments, while TKN Developers contributes deep knowledge in integrated townships and commercial projects.
+                  The leadership from Concorde Group brings extensive experience in luxury residential developments, while TKN Developers contributes deep knowledge in municipal town planning and commercial projects.
                 </p>
                 <p>
-                  Together, we're combining the best of both worlds to deliver thoughtfully designed, premium quality developments that truly enhance the lives of our customers.
+                  Together, we're combining the best of both worlds to deliver thoughtfully designed, premium-quality developments that truly enhance the lives of our customers.
                 </p>
               </div>
               
