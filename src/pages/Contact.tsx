@@ -109,14 +109,14 @@ const Contact = () => {
         <div className="container-custom mx-auto">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9974199142!2d77.35073573214174!3d12.95384772597319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1687345639008!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.8447827669847!2d78.54861!3d13.4906592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb265003ebbafe1%3A0xcdf9dca51bb8beef!2sGK%20Nature%20Valley!5e0!3m2!1sen!2sin!4v1687345639008!5m2!1sen!2sin" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="GK Estates Office Location"
+              title="GK Nature Valley Location - Madanapalle"
             ></iframe>
           </div>
         </div>
