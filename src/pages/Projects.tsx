@@ -13,11 +13,11 @@ const projectDetails = {
   status: "Ongoing",
   price: "Contact for Pricing",
   description: "Nature Valley is a luxurious residential development designed to offer a peaceful and serene lifestyle, surrounded by lush greenery and a tranquil environment. Located near Madanapalli, beside Adithya Engineering College, Nature Valley provides plots of land for sale, where future homeowners can create their dream homes in a naturally beautiful setting with Subhareddy lake nearby.",
-  mainImage: "/lovable-uploads/84434996-f393-47d3-b9b7-084207d98026.png",
+  mainImage: "/lovable-uploads/c9961a7c-3c95-46a0-afe6-cc9032d49c2e.png",
   galleryImages: [
-    "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=600&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=600&auto=format&fit=crop", 
-    "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=600&auto=format&fit=crop", 
+    "/lovable-uploads/18a4bafc-e2fb-416e-98d2-925b15792ec8.png", 
+    "/lovable-uploads/6b2ee90e-fbae-4e5c-a5c8-59d385f16a53.png", 
+    "/lovable-uploads/c9961a7c-3c95-46a0-afe6-cc9032d49c2e.png", 
     "/lovable-uploads/b3d2111c-5350-4a7b-9f69-75764f222636.png", 
     "/lovable-uploads/098d94c9-59dc-4495-82af-c5a7ef37fe75.png"
   ],
@@ -46,7 +46,7 @@ const projectDetails = {
   clubhouse: {
     title: "Exclusive Clubhouse",
     description: "Our state-of-the-art clubhouse stands as a centerpiece of the Nature Valley project, offering residents a premium space for recreation, fitness, and social gatherings surrounded by the natural beauty of the development.",
-    image: "/lovable-uploads/84434996-f393-47d3-b9b7-084207d98026.png"
+    image: "/lovable-uploads/c9961a7c-3c95-46a0-afe6-cc9032d49c2e.png"
   }
 };
 

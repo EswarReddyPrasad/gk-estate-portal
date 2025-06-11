@@ -40,12 +40,12 @@ const Hero = () => {
           muted 
           loop 
           playsInline 
-          poster="https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop"
+          poster="/lovable-uploads/18a4bafc-e2fb-416e-98d2-925b15792ec8.png"
         >
           <source src="/lovable-uploads/nature-valley-video.mp4" type="video/mp4" />
           {/* Fallback background image if video fails to load */}
           <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop')",
+            backgroundImage: "url('/lovable-uploads/18a4bafc-e2fb-416e-98d2-925b15792ec8.png')",
             backgroundPosition: "center 30%"
           }} />
         </video>

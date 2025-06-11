@@ -9,7 +9,7 @@ const projectDetails = {
   title: "G.K. Nature Valley",
   location: "Bode Vari Palli (Village), Near Madanapalli",
   description: "A luxurious farm plots development with DTCP approval, offering customizable villa-building assistance, surrounded by lush greenery and near Subhareddy lake.",
-  mainImage: "/lovable-uploads/84434996-f393-47d3-b9b7-084207d98026.png",
+  mainImage: "/lovable-uploads/c9961a7c-3c95-46a0-afe6-cc9032d49c2e.png",
   features: [
     {
       icon: TreePine,
@@ -42,7 +42,7 @@ const FeaturedProjects = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center" 
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2000&auto=format&fit=crop')",
+            backgroundImage: "url('/lovable-uploads/6b2ee90e-fbae-4e5c-a5c8-59d385f16a53.png')",
           }}
         />
         <div className="absolute inset-0 nature-overlay" />
