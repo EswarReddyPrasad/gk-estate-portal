@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   
   useEffect(() => {
     // Parallax effect on scroll
@@ -18,21 +19,36 @@ const Hero = () => {
       }
     };
 
+    // Start video playback when component mounts
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.error("Video playback failed:", error);
+      });
+    }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
   return (
     <div className="relative h-screen flex items-center overflow-hidden">
-      {/* Image Background with Overlay */}
+      {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0" ref={heroRef}>
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center" 
-          style={{
-            backgroundImage: "url('/lovable-uploads/6d496cec-16e7-4e91-902e-3d2682176092.png')",
-            backgroundPosition: "center center"
-          }}
-        />
+        <video 
+          ref={videoRef} 
+          className="absolute inset-0 w-full h-full object-cover" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          poster="https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop"
+        >
+          <source src="/lovable-uploads/nature-valley-video.mp4" type="video/mp4" />
+          {/* Fallback background image if video fails to load */}
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=2000&auto=format&fit=crop')",
+            backgroundPosition: "center 30%"
+          }} />
+        </video>
         <div className="absolute inset-0 nature-overlay" />
       </div>
 
